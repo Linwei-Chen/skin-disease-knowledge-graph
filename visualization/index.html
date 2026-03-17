@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>皮肤病知识图谱可视化</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:#0f1117; color:#e0e0e0; }
+.header { background:linear-gradient(135deg,#1a1a2e,#16213e); padding:24px 32px; border-bottom:1px solid #2a2a4a; }
+.header h1 { font-size:24px; font-weight:600; color:#fff; }
+.header p { font-size:13px; color:#888; margin-top:4px; }
+.stats-bar { display:flex; gap:12px; padding:16px 32px; background:#12141d; border-bottom:1px solid #1e2030; overflow-x:auto; }
+.stat-card { min-width:130px; padding:12px 16px; background:#1a1c2e; border-radius:8px; border:1px solid #2a2d45; }
+.stat-card .value { font-size:22px; font-weight:700; color:#60a5fa; }
+.stat-card .label { font-size:11px; color:#888; margin-top:2px; }
+.main { display:flex; height:calc(100vh - 160px); }
+.sidebar { width:340px; border-right:1px solid #1e2030; overflow-y:auto; background:#12141d; flex-shrink:0; }
+.content { flex:1; overflow-y:auto; padding:20px 28px; }
+.search-box { padding:12px 16px; position:sticky; top:0; background:#12141d; z-index:10; border-bottom:1px solid #1e2030; }
+.search-box input { width:100%; padding:8px 12px; border-radius:6px; border:1px solid #2a2d45; background:#1a1c2e; color:#e0e0e0; font-size:13px; outline:none; }
+.search-box input:focus { border-color:#60a5fa; }
+.search-box .filter-row { display:flex; gap:6px; margin-top:8px; flex-wrap:wrap; }
+.search-box .filter-btn { padding:4px 10px; border-radius:12px; border:1px solid #2a2d45; background:#1a1c2e; color:#999; font-size:11px; cursor:pointer; }
+.search-box .filter-btn.active { background:#1e3a5f; border-color:#60a5fa; color:#60a5fa; }
+.tree-node { padding:6px 12px; cursor:pointer; font-size:12px; border-bottom:1px solid #1a1c2e; transition:background .15s; display:flex; align-items:center; gap:6px; }
+.tree-node:hover { background:#1a1c2e; }
+.tree-node.selected { background:#1e3a5f; border-left:3px solid #60a5fa; }
+.tree-node .badge { padding:1px 6px; border-radius:8px; font-size:10px; font-weight:500; }
+.badge-ch14 { background:#1e3a5f; color:#60a5fa; }
+.badge-ch01 { background:#3a1e1e; color:#f87171; }
+.badge-ch02 { background:#3a2e1e; color:#fbbf24; }
+.badge-hpo { background:#1e3a2e; color:#34d399; }
+.badge-other { background:#2a2a2a; color:#999; }
+.tree-node .img-count { font-size:10px; color:#f59e0b; margin-left:auto; }
+.detail-panel { max-width:900px; }
+.detail-panel h2 { font-size:20px; font-weight:600; color:#fff; margin-bottom:4px; }
+.detail-panel .cn-name { font-size:15px; color:#999; }
+.detail-panel .meta-tags { display:flex; gap:6px; margin:12px 0; flex-wrap:wrap; }
+.tag { padding:3px 10px; border-radius:12px; font-size:11px; }
+.tag-blue { background:#1e3a5f; color:#60a5fa; }
+.tag-green { background:#1e3a2e; color:#34d399; }
+.tag-yellow { background:#3a2e1e; color:#fbbf24; }
+.tag-red { background:#3a1e1e; color:#f87171; }
+.tag-purple { background:#2e1e3a; color:#a78bfa; }
+.section { margin:16px 0; }
+.section-title { font-size:13px; font-weight:600; color:#999; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; border-bottom:1px solid #1e2030; padding-bottom:4px; }
+.def-text { font-size:13px; line-height:1.7; color:#ccc; background:#1a1c2e; padding:12px 16px; border-radius:8px; border-left:3px solid #60a5fa; }
+.syn-list { display:flex; flex-wrap:wrap; gap:6px; }
+.syn-item { padding:3px 10px; background:#1a1c2e; border:1px solid #2a2d45; border-radius:6px; font-size:12px; color:#bbb; }
+.xref-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:8px; }
+.xref-card { padding:8px 12px; background:#1a1c2e; border:1px solid #2a2d45; border-radius:6px; }
+.xref-card .xref-src { font-size:10px; color:#888; text-transform:uppercase; }
+.xref-card .xref-val { font-size:12px; color:#e0e0e0; margin-top:2px; word-break:break-all; }
+.edges-table { width:100%; border-collapse:collapse; font-size:12px; }
+.edges-table th { text-align:left; padding:6px 10px; color:#888; font-weight:500; border-bottom:1px solid #2a2d45; }
+.edges-table td { padding:6px 10px; border-bottom:1px solid #1a1c2e; }
+.edges-table tr:hover { background:#1a1c2e; }
+.rel-tag { padding:2px 8px; border-radius:4px; font-size:11px; }
+.placeholder { text-align:center; padding:60px 20px; color:#555; }
+.placeholder .icon { font-size:48px; margin-bottom:16px; }
+.chart-row { display:flex; gap:20px; margin:16px 0; flex-wrap:wrap; }
+.chart-box { flex:1; min-width:250px; background:#1a1c2e; border:1px solid #2a2d45; border-radius:8px; padding:16px; }
+.chart-box h3 { font-size:13px; color:#888; margin-bottom:10px; }
+.bar { display:flex; align-items:center; margin:4px 0; font-size:11px; }
+.bar .bar-label { width:120px; color:#bbb; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+.bar .bar-fill { height:14px; border-radius:3px; margin:0 8px; transition:width .3s; }
+.bar .bar-val { color:#888; min-width:40px; }
+.overview-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; margin:16px 0; }
+.ov-card { background:#1a1c2e; border:1px solid #2a2d45; border-radius:8px; padding:16px; cursor:pointer; transition:border-color .2s; }
+.ov-card:hover { border-color:#60a5fa; }
+.ov-card h3 { font-size:14px; color:#fff; margin-bottom:6px; }
+.ov-card .ov-stats { font-size:12px; color:#888; }
+.tabs { display:flex; gap:2px; margin-bottom:16px; background:#12141d; border-radius:8px; padding:3px; }
+.tab { padding:8px 16px; border-radius:6px; cursor:pointer; font-size:13px; color:#888; transition:all .2s; }
+.tab.active { background:#1a1c2e; color:#60a5fa; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Skin Disease Knowledge Graph Explorer</h1>
+  <p>ICD-11 Foundation + MMS + DermO + HPO + DOID + RSDB + Orphanet + Derm1M</p>
+</div>
+<div class="stats-bar" id="statsBar"></div>
+<div class="main">
+  <div class="sidebar">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search diseases, phenotypes, codes...">
+      <div class="filter-row">
+        <span class="filter-btn active" data-filter="all">All</span>
+        <span class="filter-btn" data-filter="has_def">Has Definition</span>
+        <span class="filter-btn" data-filter="has_images">Has Images</span>
+        <span class="filter-btn" data-filter="has_cn">Has Chinese</span>
+        <span class="filter-btn" data-filter="hpo">HPO Phenotypes</span>
+      </div>
+    </div>
+    <div id="nodeList"></div>
+  </div>
+  <div class="content">
+    <div id="detailPanel">
+      <div class="placeholder">
+        <div class="icon">&#x1F50D;</div>
+        <h2 style="font-size:18px;color:#666">Select a node from the left panel</h2>
+        <p style="color:#555;margin-top:8px">or search by disease name, ICD-11 code, or synonym</p>
+        <div id="overview" style="margin-top:24px;text-align:left"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+let KG = null;
+let nodes = [];
+let edges = [];
+let nodeMap = {};
+let filteredNodes = [];
+let currentFilter = 'all';
+let currentNode = null;
+
+async function loadData() {
+  const resp = await fetch('skin_kg_v3.json');
+  KG = await resp.json();
+  nodes = KG.nodes;
+  edges = KG.edges;
+  nodeMap = {};
+  nodes.forEach(n => nodeMap[n.id] = n);
+  renderStats();
+  renderOverview();
+  applyFilter();
+}
+
+function renderStats() {
+  const m = KG.metadata;
+  const bar = document.getElementById('statsBar');
+  const items = [
+    { v: m.total_nodes, l: 'Nodes' },
+    { v: m.total_edges, l: 'Edges' },
+    { v: m.nodes_with_definition, l: 'With Definition' },
+    { v: m.nodes_with_synonyms, l: 'With Synonyms' },
+    { v: m.nodes_with_mms_code, l: 'With ICD-11 Code' },
+    { v: m.nodes_with_cn_name, l: 'With Chinese Name' },
+    { v: m.nodes_with_images, l: 'With Images' },
+    { v: m.total_image_mappings, l: 'Total Images' },
+    { v: m.nodes_with_snomed, l: 'With SNOMED' },
+    { v: m.nodes_with_hpo, l: 'With HPO' },
+  ];
+  bar.innerHTML = items.map(i =>
+    `<div class="stat-card"><div class="value">${i.v.toLocaleString()}</div><div class="label">${i.l}</div></div>`
+  ).join('');
+}
+
+function renderOverview() {
+  const ov = document.getElementById('overview');
+  // Top categories (Ch14 level-2 blocks)
+  const ch14 = nodes.filter(n => n.chapter === '14' && !n.is_leaf && n.path_id && n.path_id.split('.').length === 2);
+  ch14.sort((a,b) => {
+    const pa = parseFloat(a.path_id)||0, pb = parseFloat(b.path_id)||0;
+    return pa - pb;
+  });
+
+  // Chapter distribution
+  const chDist = {};
+  nodes.forEach(n => { const c = n.chapter||'?'; chDist[c] = (chDist[c]||0)+1; });
+
+  let html = '<h2 style="font-size:18px;color:#fff;margin-bottom:12px">Knowledge Graph Overview</h2>';
+
+  // Source distribution
+  html += '<div class="chart-row">';
+  html += '<div class="chart-box"><h3>Data Sources</h3>';
+  const srcDist = KG.metadata.source_dist || {};
+  const srcMax = Math.max(...Object.values(srcDist));
+  Object.entries(srcDist).sort((a,b)=>b[1]-a[1]).forEach(([k,v]) => {
+    const pct = (v/srcMax*100).toFixed(0);
+    const colors = {foundation:'#3b82f6','foundation+mms':'#8b5cf6',mms_only:'#f59e0b',hpo:'#10b981'};
+    html += `<div class="bar"><span class="bar-label">${k}</span><div class="bar-fill" style="width:${pct}%;background:${colors[k]||'#666'}"></div><span class="bar-val">${v.toLocaleString()}</span></div>`;
+  });
+  html += '</div>';
+
+  // Chapter distribution
+  html += '<div class="chart-box"><h3>Chapter Distribution</h3>';
+  const chMax = Math.max(...Object.values(chDist));
+  Object.entries(chDist).sort((a,b)=>b[1]-a[1]).slice(0,8).forEach(([k,v]) => {
+    const pct = (v/chMax*100).toFixed(0);
+    html += `<div class="bar"><span class="bar-label">Ch ${k}</span><div class="bar-fill" style="width:${pct}%;background:${k==='14'?'#3b82f6':k==='HPO'?'#10b981':'#666'}"></div><span class="bar-val">${v.toLocaleString()}</span></div>`;
+  });
+  html += '</div></div>';
+
+  // Edge type distribution
+  html += '<div class="chart-row"><div class="chart-box"><h3>Edge Types</h3>';
+  const etDist = KG.metadata.edge_types || {};
+  const etMax = Math.max(...Object.values(etDist));
+  Object.entries(etDist).sort((a,b)=>b[1]-a[1]).forEach(([k,v]) => {
+    const pct = (v/etMax*100).toFixed(0);
+    html += `<div class="bar"><span class="bar-label">${k}</span><div class="bar-fill" style="width:${pct}%;background:#6366f1"></div><span class="bar-val">${v.toLocaleString()}</span></div>`;
+  });
+  html += '</div></div>';
+
+  // Top-level categories
+  if (ch14.length > 0) {
+    html += '<h3 style="font-size:14px;color:#888;margin:16px 0 8px">Chapter 14 Top-Level Categories</h3>';
+    html += '<div class="overview-grid">';
+    ch14.forEach(n => {
+      html += `<div class="ov-card" onclick="selectNode('${n.id}')"><h3>${n.name}</h3><div class="ov-stats">Path: ${n.path_id} | Code: ${n.mms_code||'block'}</div></div>`;
+    });
+    html += '</div>';
+  }
+  ov.innerHTML = html;
+}
+
+function applyFilter() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  filteredNodes = nodes.filter(n => {
+    if (currentFilter === 'has_def' && !n.definition) return false;
+    if (currentFilter === 'has_images' && !n.image_count) return false;
+    if (currentFilter === 'has_cn' && !n.cn_name) return false;
+    if (currentFilter === 'hpo' && n.source !== 'hpo') return false;
+    if (q) {
+      const haystack = [n.name, n.cn_name, n.mms_code, n.id, ...(n.synonyms||[])].join(' ').toLowerCase();
+      if (!haystack.includes(q)) return false;
+    }
+    return true;
+  });
+  // Sort: images first, then by name
+  filteredNodes.sort((a,b) => {
+    if (b.image_count !== a.image_count) return b.image_count - a.image_count;
+    return (a.name||'').localeCompare(b.name||'');
+  });
+  renderNodeList();
+}
+
+function renderNodeList() {
+  const list = document.getElementById('nodeList');
+  const show = filteredNodes.slice(0, 500); // limit for performance
+  list.innerHTML = show.map(n => {
+    const ch = n.chapter;
+    let badgeClass = 'badge-other';
+    if (ch === '14') badgeClass = 'badge-ch14';
+    else if (ch === '01') badgeClass = 'badge-ch01';
+    else if (ch === '02') badgeClass = 'badge-ch02';
+    else if (ch === 'HPO') badgeClass = 'badge-hpo';
+    const sel = currentNode && currentNode.id === n.id ? ' selected' : '';
+    const imgHtml = n.image_count ? `<span class="img-count">${n.image_count} imgs</span>` : '';
+    return `<div class="tree-node${sel}" onclick="selectNode('${n.id}')"><span class="badge ${badgeClass}">${ch||'?'}</span><span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${n.name||n.id}</span>${imgHtml}</div>`;
+  }).join('');
+  if (filteredNodes.length > 500) {
+    list.innerHTML += `<div style="padding:12px;text-align:center;color:#666;font-size:12px">Showing 500 of ${filteredNodes.length} results</div>`;
+  }
+}
+
+function selectNode(id) {
+  currentNode = nodeMap[id];
+  if (!currentNode) return;
+  renderNodeList(); // update selection highlight
+  renderDetail(currentNode);
+}
+
+function renderDetail(n) {
+  const panel = document.getElementById('detailPanel');
+  let html = '';
+
+  // Header
+  html += `<h2>${n.name || n.id}</h2>`;
+  if (n.cn_name) html += `<div class="cn-name">${n.cn_name}</div>`;
+
+  // Meta tags
+  html += '<div class="meta-tags">';
+  if (n.mms_code) html += `<span class="tag tag-blue">ICD-11: ${n.mms_code}</span>`;
+  html += `<span class="tag tag-purple">Ch ${n.chapter}</span>`;
+  html += `<span class="tag" style="background:#222;color:#999">${n.source}</span>`;
+  if (n.is_leaf) html += `<span class="tag tag-green">Leaf</span>`;
+  if (n.image_count) html += `<span class="tag tag-yellow">${n.image_count.toLocaleString()} images</span>`;
+  if (n.path_id) html += `<span class="tag" style="background:#222;color:#888">Path: ${n.path_id}</span>`;
+  html += '</div>';
+
+  // Definition
+  if (n.definition) {
+    html += '<div class="section"><div class="section-title">Definition</div>';
+    html += `<div class="def-text">${n.definition}</div></div>`;
+  }
+
+  // Synonyms
+  if (n.synonyms && n.synonyms.length) {
+    html += '<div class="section"><div class="section-title">Synonyms (' + n.synonyms.length + ')</div>';
+    html += '<div class="syn-list">' + n.synonyms.map(s => `<span class="syn-item">${s}</span>`).join('') + '</div></div>';
+  }
+
+  // Phenotypes
+  if (n.hpo_pheno && n.hpo_pheno.length) {
+    html += '<div class="section"><div class="section-title">Phenotypes / Symptoms (' + n.hpo_pheno.length + ')</div>';
+    html += '<div class="syn-list">' + n.hpo_pheno.slice(0,30).map(p => `<span class="syn-item" style="border-color:#1e3a2e;color:#34d399">${p}</span>`).join('') + '</div></div>';
+  }
+
+  // Drugs
+  if (n.drugs && n.drugs.length) {
+    html += '<div class="section"><div class="section-title">Associated Drugs (' + n.drugs.length + ')</div>';
+    html += '<div class="syn-list">' + n.drugs.slice(0,20).map(d => `<span class="syn-item" style="border-color:#3a2e1e;color:#fbbf24">${d}</span>`).join('') + '</div></div>';
+  }
+
+  // Cross-references
+  const xrefs = [];
+  if (n.dermo_id) xrefs.push({src:'DermO', val:n.dermo_id});
+  if (n.doid_id) xrefs.push({src:'DOID', val:n.doid_id});
+  if (n.snomed && n.snomed.length) n.snomed.forEach(s => xrefs.push({src:'SNOMED CT', val:s}));
+  if (n.omim && n.omim.length) n.omim.forEach(s => xrefs.push({src:'OMIM', val:s}));
+  if (n.umls && n.umls.length) n.umls.forEach(s => xrefs.push({src:'UMLS CUI', val:s}));
+  if (n.mesh && n.mesh.length) n.mesh.forEach(s => xrefs.push({src:'MeSH', val:s}));
+  if (n.icd10 && n.icd10.length) n.icd10.forEach(s => xrefs.push({src:'ICD-10', val:s}));
+  if (n.orpha_codes && n.orpha_codes.length) n.orpha_codes.forEach(s => xrefs.push({src:'Orphanet', val:s}));
+
+  if (xrefs.length) {
+    html += '<div class="section"><div class="section-title">Cross-References (' + xrefs.length + ')</div>';
+    html += '<div class="xref-grid">' + xrefs.map(x =>
+      `<div class="xref-card"><div class="xref-src">${x.src}</div><div class="xref-val">${x.val}</div></div>`
+    ).join('') + '</div></div>';
+  }
+
+  // Related edges
+  const relEdges = edges.filter(e => e.source === n.id || e.target === n.id);
+  const isaParents = relEdges.filter(e => e.source === n.id && (e.relation === 'is_a' || e.relation === 'mms_parent'));
+  const isaChildren = relEdges.filter(e => e.target === n.id && (e.relation === 'is_a' || e.relation === 'mms_parent'));
+
+  if (isaParents.length) {
+    html += '<div class="section"><div class="section-title">Parent Categories (' + isaParents.length + ')</div>';
+    html += '<table class="edges-table"><tr><th>Relation</th><th>Parent</th></tr>';
+    isaParents.forEach(e => {
+      const p = nodeMap[e.target];
+      const pname = p ? `<span style="cursor:pointer;color:#60a5fa" onclick="selectNode('${e.target}')">${p.name}</span>` : e.target;
+      html += `<tr><td><span class="rel-tag" style="background:#1e3a5f;color:#60a5fa">${e.relation}</span></td><td>${pname}</td></tr>`;
+    });
+    html += '</table></div>';
+  }
+
+  if (isaChildren.length) {
+    html += '<div class="section"><div class="section-title">Child Diseases (' + isaChildren.length + ')</div>';
+    html += '<table class="edges-table"><tr><th>Relation</th><th>Child</th><th>Images</th></tr>';
+    isaChildren.slice(0,50).forEach(e => {
+      const c = nodeMap[e.source];
+      const cname = c ? `<span style="cursor:pointer;color:#60a5fa" onclick="selectNode('${e.source}')">${c.name}</span>` : e.source;
+      const imgs = c && c.image_count ? c.image_count.toLocaleString() : '-';
+      html += `<tr><td><span class="rel-tag" style="background:#1e3a2e;color:#34d399">${e.relation}</span></td><td>${cname}</td><td>${imgs}</td></tr>`;
+    });
+    if (isaChildren.length > 50) html += `<tr><td colspan=3 style="color:#666">...and ${isaChildren.length-50} more</td></tr>`;
+    html += '</table></div>';
+  }
+
+  // Data sources
+  if (n.data_sources && n.data_sources.length) {
+    html += '<div class="section"><div class="section-title">Image Data Sources</div>';
+    html += '<div class="syn-list">' + n.data_sources.map(s => `<span class="syn-item">${s}</span>`).join('') + '</div></div>';
+  }
+
+  // Raw ID
+  html += `<div style="margin-top:20px;padding:8px 12px;background:#111;border-radius:4px;font-size:11px;color:#555">ID: ${n.id}</div>`;
+
+  panel.innerHTML = html;
+}
+
+// Event listeners
+document.getElementById('searchInput').addEventListener('input', applyFilter);
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    currentFilter = this.dataset.filter;
+    applyFilter();
+  });
+});
+
+// Load
+loadData().catch(e => {
+  document.getElementById('detailPanel').innerHTML =
+    `<div class="placeholder"><h2 style="color:#f87171">Error loading data</h2><p style="color:#888;margin-top:8px">${e.message}<br><br>Make sure skin_kg_v3.json is in the same directory as this HTML file.</p></div>`;
+});
+</script>
+</body>
+</html>

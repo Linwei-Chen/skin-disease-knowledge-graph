@@ -1,0 +1,1842 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://medicine.wustl.edu/ontology/ddx.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://medicine.wustl.edu/ontology/ddx.owl#">
+    <Prefix name="" IRI="https://medicine.wustl.edu/ontology/ddx.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/iao/2020-12-09/iao.owl</Import>
+    <Import>https://raw.githubusercontent.com/UTHealth-Ontology/DEVO/main/devo.owl</Import>
+    <Import>https://raw.githubusercontent.com/UTHealth-Ontology/D3X/main/imports/swo-license-terms.owl</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal>Rebecca Lin
+Cynthia Wang
+John Strickley
+Tuan Amith</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal>Dermoscopy Differential Diagnoses Ontology</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="Acral_melanoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Acral_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Acral_pseudolymphomatous_angiokeratoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Acral_pseudolymphomatous_angiokeratoma_of_children"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Actinic_keratosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Angiokeratoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Atypical_fibroxanthoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Basal_cell_carcinoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Blue_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Clonal_seborrheic_keratosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Congenital_melanocytic_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DermNet_image"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Dermal_cellular_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Dermal_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Dermatofibroma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Dermoscopedia_image"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Dysplastic_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Dysplastic_nevus_with_spitzoid_features"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Facial_actinic_keratosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Facial_lentigo_maligna_melanoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Facial_melanoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Facial_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Hemosiderotic_dermatofibroma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Ink_spot_lentigo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Kaposi_sarcoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Lentigo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Lentigo_maligna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Lentigo_maligna_melanoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Lentingo_maligna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Lichen_planus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Lichen_planus-like"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Lichen_planus-like_keratosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Melanocytic_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Melanoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Melanoma_on_sun_damaged_skin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Merkel_cell_carcinoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NCBI_Hosted_image"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Nipple_supernumerary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Open_access_journal_image"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Placeholder_image"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Pyogenic_granuloma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Recurrent_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Reed_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Seborrheic_keratosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Solar_lentigo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Spindle_cell_nevus_of_Reed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Spitz_nevus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Spitz_nevus_with_intraepidermal_pagetoid_spread"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Squamous_cell_carcinoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Stasis_dermatitis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Supernumerary_nipple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="single_spitz_nevus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="test-image"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/image"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/logo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/photo"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Angulated_Lines"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Lentigo_maligna"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Angulated_Lines"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Lentigo_maligna_melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Angulated_Lines"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma_on_sun_damaged_skin"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Annular_Granular_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Facial_lentigo_maligna_melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Annular_Granular_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Lentigo_maligna"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Asymmetric_Pigmented"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Lentigo_maligna"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Atypical_Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dysplastic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Atypical_Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Atypical_Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blotch_Irregular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blotch_Irregular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blotch_Irregular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Seborrheic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blotch_Regular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blotch_Regular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dysplastic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blotch_Regular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Seborrheic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blue_Gray_Ovid_Nest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blue_Whitish_Veil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Angiokeratoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blue_Whitish_Veil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blue_Whitish_Veil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Congenital_melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blue_Whitish_Veil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dermatofibroma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blue_Whitish_Veil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blue_Whitish_Veil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Pyogenic_granuloma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blue_Whitish_Veil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Reed_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blue_Whitish_Veil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Seborrheic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Blue_Whitish_Veil"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Spitz_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Branched_Streaks"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Branched_Streaks"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Broadened_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Central_White_Patch"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Central_White_Patch"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dermatofibroma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Cerebriform_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Seborrheic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Cobblestones"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Congenital_melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Cobblestones"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dermal_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Comedo-like_Openings"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Seborrheic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Crypts"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Seborrheic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Delicate_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dermatofibroma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Dots_Irregular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Dots_Irregular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Dots_Irregular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Squamous_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Dots_Regular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Dots_Regular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Dots_Regular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Squamous_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Fibrillar_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Acral_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Fingerprint_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Seborrheic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Fingerprint_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Solar_lentigo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Globules_Irregular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dysplastic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Globules_Irregular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Globules_Regular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Globules_Regular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Clonal_seborrheic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Globules_Regular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dermatofibroma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Globules_Regular"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Latticelike_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Acral_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Leaflike_Areas"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Milky-Red_Areas"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Milky-Red_Areas"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dermatofibroma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Milky-Red_Areas"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Milky-Red_Areas"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Pyogenic_granuloma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Moth-eaten_Border"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Solar_lentigo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Negative_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Congenital_melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Negative_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Negative_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Spitz_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Parallel_Furrow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Acral_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Parallel_Ridge_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Acral_melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Peppering_Granularity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Lichen_planus-like_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Peppering_Granularity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Peppering_Granularity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dermatofibroma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dysplastic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Ink_spot_lentigo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Solar_lentigo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Supernumerary_nipple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pseduopods"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pseduopods"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Recurrent_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pseduopods"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Reed_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pseduopods"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Spitz_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Pseudonetwork"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Facial_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Radial_Streaming"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Radial_Streaming"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Recurrent_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Radial_Streaming"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Reed_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Radial_Streaming"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Spitz_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Acral_pseudolymphomatous_angiokeratoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Actinic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Atypical_fibroxanthoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Blue_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Hemosiderotic_dermatofibroma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Kaposi_sarcoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Lichen_planus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Merkel_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rainbow_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Stasis_dermatitis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rhomboids"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Facial_melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rhomboids"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Lentigo_maligna"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rim_of_Brown_Globules"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dysplastic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rim_of_Brown_Globules"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rim_of_Brown_Globules"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rim_of_Brown_Globules"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Spitz_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rosettes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Actinic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rosettes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Rosettes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Squamous_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Scarlike_Depigmentation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Lichen_planus-like_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Scarlike_Depigmentation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Scarlike_Depigmentation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Shiny_White_Blotches_and_Strands"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Shiny_White_Blotches_and_Strands"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Lichen_planus-like_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Shiny_White_Blotches_and_Strands"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Shiny_White_Streaks"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Shiny_White_Streaks"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dermatofibroma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Shiny_White_Streaks"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dysplastic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Shiny_White_Streaks"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Lichen_planus-like_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Shiny_White_Streaks"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Shiny_White_Streaks"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Spitz_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Spoke_Wheel_Area"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Basal_cell_carcinoma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Starburst_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dysplastic_nevus_with_spitzoid_features"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Starburst_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Reed_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Starburst_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Spitz_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Strawberry_Pattern"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Actinic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Typical_Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Dermatofibroma"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Typical_Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Ink_spot_lentigo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Typical_Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Melanocytic_nevus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Typical_Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Solar_lentigo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Typical_Pigment_Network"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Supernumerary_nipple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Milia-like_Cyst_(Cloudy)"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Seborrheic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://sbmi.uth.edu/ontology/DEVO#Milia-like_Cyst_(Starry)"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002607"/>
+            <Class IRI="Seborrheic_keratosis"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Acral_melanoma"/>
+        <Class IRI="Melanoma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Acral_nevus"/>
+        <Class IRI="Melanocytic_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Acral_pseudolymphomatous_angiokeratoma"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Acral_pseudolymphomatous_angiokeratoma_of_children"/>
+        <Class IRI="Acral_pseudolymphomatous_angiokeratoma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Actinic_keratosis"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Angiokeratoma"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Atypical_fibroxanthoma"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Basal_cell_carcinoma"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Basal_cell_carcinoma"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IAO_0000235"/>
+            <NamedIndividual IRI="test-image"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Blue_nevus"/>
+        <Class IRI="Melanocytic_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Clonal_seborrheic_keratosis"/>
+        <Class IRI="Seborrheic_keratosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Congenital_melanocytic_nevus"/>
+        <Class IRI="Melanocytic_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DermNet_image"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000101"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DermNet_image"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ebi.ac.uk/swo/has_license"/>
+            <Class IRI="http://www.ebi.ac.uk/swo/license/SWO_1000085"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Dermal_cellular_nevus"/>
+        <Class IRI="Dermal_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Dermal_nevus"/>
+        <Class IRI="Melanocytic_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Dermatofibroma"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Dermoscopedia_image"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000101"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Dermoscopedia_image"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ebi.ac.uk/swo/has_license"/>
+            <Class IRI="http://www.ebi.ac.uk/swo/license/SWO_1000085"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Dysplastic_nevus"/>
+        <Class IRI="Melanocytic_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Dysplastic_nevus_with_spitzoid_features"/>
+        <Class IRI="Dysplastic_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Facial_actinic_keratosis"/>
+        <Class IRI="Actinic_keratosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Facial_lentigo_maligna_melanoma"/>
+        <Class IRI="Lentigo_maligna_melanoma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Facial_melanoma"/>
+        <Class IRI="Melanoma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Facial_nevus"/>
+        <Class IRI="Melanocytic_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Hemosiderotic_dermatofibroma"/>
+        <Class IRI="Dermatofibroma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Ink_spot_lentigo"/>
+        <Class IRI="Lentigo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Kaposi_sarcoma"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Lentigo"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Lentigo_maligna"/>
+        <Class IRI="Lentigo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Lentigo_maligna_melanoma"/>
+        <Class IRI="Melanoma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Lentingo_maligna"/>
+        <Class IRI="Melanoma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Lichen_planus"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Lichen_planus-like"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Lichen_planus-like_keratosis"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Melanocytic_nevus"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Melanoma"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Melanoma_on_sun_damaged_skin"/>
+        <Class IRI="Melanoma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Merkel_cell_carcinoma"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NCBI_Hosted_image"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000101"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NCBI_Hosted_image"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ebi.ac.uk/swo/has_license"/>
+            <Class IRI="http://www.ebi.ac.uk/swo/license/SWO_1000061"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nipple_supernumerary"/>
+        <Class IRI="Supernumerary_nipple"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Open_access_journal_image"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000101"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Placeholder_image"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000101"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Pyogenic_granuloma"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Recurrent_nevus"/>
+        <Class IRI="Melanocytic_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Reed_nevus"/>
+        <Class IRI="Melanocytic_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Seborrheic_keratosis"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Solar_lentigo"/>
+        <Class IRI="Lentigo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Spindle_cell_nevus_of_Reed"/>
+        <Class IRI="Reed_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Spitz_nevus"/>
+        <Class IRI="Melanocytic_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Spitz_nevus_with_intraepidermal_pagetoid_spread"/>
+        <Class IRI="Spitz_nevus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Squamous_cell_carcinoma"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Stasis_dermatitis"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Supernumerary_nipple"/>
+        <Class IRI="Dermascopy_Differential_Diagnosis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="single_spitz_nevus"/>
+        <Class IRI="Spitz_nevus"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="DermNet_image"/>
+        <Class IRI="Placeholder_image"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000101"/>
+        <NamedIndividual IRI="test-image"/>
+    </ClassAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0002607</IRI>
+        <Literal>is marker for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Acral_melanoma</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C4022</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Acral_melanoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10000583</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Acral_melanoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/16974005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>Acral_melanoma</IRI>
+        <Literal>Acral (lentiginous) melanoma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>Acral_melanoma</IRI>
+        <Literal>Acral (lentiginous) melanoma, malignant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Acral_nevus</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54659</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Acral_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/816201004</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Acral_pseudolymphomatous_angiokeratoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10078491</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Acral_pseudolymphomatous_angiokeratoma_of_children</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/402842008</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>Acral_pseudolymphomatous_angiokeratoma_of_children</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>Acral_pseudolymphomatous_angiokeratoma_of_children</IRI>
+        <Literal>APACHE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Actinic_keratosis</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3148</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Actinic_keratosis</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10000614</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Actinic_keratosis</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/201101007</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Angiokeratoma</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C2874</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Angiokeratoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10061639</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Angiokeratoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/26810009</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Atypical_fibroxanthoma</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C4246</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Atypical_fibroxanthoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10064755</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Atypical_fibroxanthoma</IRI>
+        <Literal>http://purl.obolibrary.org/obo/DERMO_0001154</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Basal_cell_carcinoma</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C156767</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Basal_cell_carcinoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10007286</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Basal_cell_carcinoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/1338007</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>Basal_cell_carcinoma</IRI>
+        <Literal>Carcinoma basal cell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Blue_nevus</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3803</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Blue_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10062788</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Blue_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/63166000</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Clonal_seborrheic_keratosis</IRI>
+        <Literal>http://purl.obolibrary.org/obo/DERMO_0000781</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Congenital_melanocytic_nevus</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3944</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Congenital_melanocytic_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10072037</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Congenital_melanocytic_nevus</IRI>
+        <Literal>http://purl.obolibrary.org/obo/DERMO_0000960</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>Congenital_melanocytic_nevus</IRI>
+        <Literal>congenital nevus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Dermal_cellular_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/302838006</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>Dermal_cellular_nevus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Dermal_nevus</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3804</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Dermatofibroma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10012494</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Dermatofibroma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/427186000</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Dermatofibroma</IRI>
+        <Literal>http://purl.obolibrary.org/obo/DERMO_0001116</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Dysplastic_nevus</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3694</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Dysplastic_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10013961</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Dysplastic_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/61814002</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Facial_actinic_keratosis</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3148</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Facial_actinic_keratosis</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10000614</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Facial_actinic_keratosis</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/201101007</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Kaposi_sarcoma</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C9087</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Kaposi_sarcoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/LNC/LA26517-5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Kaposi_sarcoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/1179374007</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Kaposi_sarcoma</IRI>
+        <Literal>http://purl.obolibrary.org/obo/DERMO_0001041</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lentigo_maligna</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43372</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lentigo_maligna</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10024218</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lentigo_maligna</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/302836005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lentigo_maligna_melanoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10024219</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lentigo_maligna_melanoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/302837001</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lichen_planus</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3189</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lichen_planus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10024429</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lichen_planus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/4776004</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lichen_planus-like</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/263797007</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>Lichen_planus-like</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lichen_planus-like_keratosis</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165485</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Lichen_planus-like_keratosis</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10064007</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Melanocytic_nevus</IRI>
+        <Literal>Nevus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Melanocytic_nevus</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7570</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Melanocytic_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10029384</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Melanocytic_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10062797</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Melanocytic_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/400096001</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Melanoma</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3224</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Melanoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10053571</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Merkel_cell_carcinoma</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C9231</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Merkel_cell_carcinoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10064025</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Merkel_cell_carcinoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/5052009</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Nipple_supernumerary</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10029422</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>Nipple_supernumerary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Pyogenic_granuloma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10037649</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Pyogenic_granuloma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/200722003</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Seborrheic_keratosis</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C9006</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Seborrheic_keratosis</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10039791</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Seborrheic_keratosis</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/25499005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Solar_lentigo</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26881</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Solar_lentigo</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10064127</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Solar_lentigo</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/72100002</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Spindle_cell_nevus_of_Reed</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/254812004</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>Spindle_cell_nevus_of_Reed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Spitz_nevus</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27007</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Spitz_nevus</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10062802</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Spitz_nevus_with_intraepidermal_pagetoid_spread</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/402551005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>Spitz_nevus_with_intraepidermal_pagetoid_spread</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Squamous_cell_carcinoma</IRI>
+        <Literal>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C2929</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Squamous_cell_carcinoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10041823</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Squamous_cell_carcinoma</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/1162767002</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Stasis_dermatitis</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/10041955</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Stasis_dermatitis</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/35498005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Stasis_dermatitis</IRI>
+        <Literal>http://purl.obolibrary.org/obo/DERMO_0000511</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Supernumerary_nipple</IRI>
+        <Literal>http://purl.bioontology.org/ontology/SNOMEDCT/50956007</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <IRI>Supernumerary_nipple</IRI>
+        <Literal>accessory nipple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>single_spitz_nevus</IRI>
+        <Literal>http://purl.obolibrary.org/obo/DERMO_0000951</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>single_spitz_nevus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/image</IRI>
+        <Literal>schema:image</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/logo</IRI>
+        <Literal>schema:logo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/photo</IRI>
+        <Literal>schema:photo</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://schema.org/logo"/>
+        <AnnotationProperty IRI="https://schema.org/image"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://schema.org/photo"/>
+        <AnnotationProperty IRI="https://schema.org/image"/>
+    </SubAnnotationPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

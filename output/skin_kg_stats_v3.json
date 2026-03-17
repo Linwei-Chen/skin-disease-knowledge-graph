@@ -1,0 +1,42 @@
+{
+  "total_nodes": 6811,
+  "total_edges": 32080,
+  "nodes_with_definition": 4174,
+  "nodes_with_synonyms": 2996,
+  "nodes_with_mms_code": 1830,
+  "nodes_with_cn_name": 1805,
+  "nodes_with_snomed": 730,
+  "nodes_with_omim": 316,
+  "nodes_with_umls": 441,
+  "nodes_with_mesh": 273,
+  "nodes_with_dermo": 866,
+  "nodes_with_doid": 425,
+  "nodes_with_orpha": 437,
+  "nodes_with_genes": 0,
+  "nodes_with_hpo": 317,
+  "nodes_with_images": 973,
+  "total_image_mappings": 207941,
+  "derm1m_unmapped_labels": 19137,
+  "edge_types": {
+    "is_a": 7204,
+    "mms_parent": 1474,
+    "also_in_chapter": 689,
+    "has_synonym": 7425,
+    "has_mms_code": 1830,
+    "xref_omim": 403,
+    "xref_umls": 474,
+    "xref_icd10": 513,
+    "xref_dermo": 866,
+    "xref_doid": 425,
+    "xref_orpha": 450,
+    "xref_snomed": 1355,
+    "xref_mesh": 276,
+    "has_phenotype": 8696
+  },
+  "source_dist": {
+    "foundation": 3912,
+    "foundation+mms": 1304,
+    "hpo": 1094,
+    "mms_only": 501
+  }
+}
