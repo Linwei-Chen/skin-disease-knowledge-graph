@@ -1,26 +1,6 @@
-# Large data files (download via scripts or links in docs/DATA_SOURCES.md)
+# GitHub 100MB single file limit
 data/Derm1M_v2_pretrain.csv
-data/rsdb/
-data/orphanet/
-data/mondo.obo
-data/icd11_foundation.json
-data/icd11_foundation.obo
-data/hp.obo
-data/doid.obo
-data/ICD-11-MMS-with-PathID.xlsx
-
-# Keep small data files tracked
-# data/dermo.obo (960K) - tracked
-# data/devo.owl (176K) - tracked
-# data/d3x.owl (76K) - tracked
-# data/derm1m_original_ontology.json (24K) - tracked
-# data/disease_icd11_mapping.json (592K) - tracked
-
-# Output (reproducible via scripts)
-output/skin_kg_v3.json
-
-# Visualization data copy
-visualization/skin_kg_v3.json
+data/rsdb/compound_gene_relationships.csv
 
 # OS
 .DS_Store
