@@ -1,0 +1,53 @@
+Orphanet / Orphadata Downloads
+===============================
+Downloaded: 2026-03-16
+Source: https://sciences.orphadata.com / https://www.orphadata.com
+Data Release: December 9, 2025 (version 1.3.42 / 4.1.8)
+License: Creative Commons Attribution 4.0 International (CC-BY-4.0)
+
+Files Downloaded
+----------------
+
+1. en_product1.xml (51 MB) - Rare diseases nomenclature + cross-reference alignments
+   URL: https://www.orphadata.com/data/xml/en_product1.xml
+   Contents: 11,456 disorders with alignments to:
+     - ICD-10 (23,100 references)
+     - ICD-11 (20,729 references)
+     - OMIM (8,525 references)
+     - UMLS (9,634 references)
+     - MeSH (3,216 references)
+     - Also includes MONDO, MedDRA, and GARD alignments
+
+2. en_product1.json (34 MB, extracted from en_product1.json.tar.gz)
+   URL: https://www.orphadata.com/data/json/en_product1.json.tar.gz
+   Contents: Same as above in JSON format
+
+3. en_product3_187.xml (890 KB) - Rare Skin Diseases Classification
+   URL: https://www.orphadata.com/data/xml/en_product3_187.xml
+   Contents: Orphanet classification of rare skin diseases
+     - 1,234 skin disease disorder entries in hierarchical classification
+
+4. en_product3_156.xml (15 MB) - Rare Genetic Diseases Classification
+   URL: https://www.orphadata.com/data/xml/en_product3_156.xml
+   Contents: Orphanet classification of rare genetic diseases
+
+5. en_product4.xml (47 MB) - HPO Phenotype Annotations
+   URL: https://www.orphadata.com/data/xml/en_product4.xml
+   Contents: 4,337 disorder-HPO annotation sets (disease-phenotype associations)
+
+6. en_product6.xml (22 MB) - Gene-Disease Associations
+   URL: https://www.orphadata.com/data/xml/en_product6.xml
+   Contents: 4,128 disorders with 8,374 gene associations
+
+7. en_product9_ages.xml (6.4 MB) - Epidemiology / Ages of Onset
+   URL: https://www.orphadata.com/data/xml/en_product9_ages.xml
+   Contents: Epidemiological data including age of onset, prevalence
+
+Additional Resources (not downloaded)
+--------------------------------------
+- Previous versions: https://github.com/Orphanet/Orphadata_aggregated
+- ORPHApackets (JSON): https://github.com/Orphanet/orphapacket
+- ORDO Ontology: https://sciences.orphadata.com/ordo/
+- API access: Available upon request via contact form
+- Other language versions available (FR, DE, NL, IT, ES, PT, PL, CZ, UK, ZH, TR)
+- Other classification files: en_product3_[ID].xml (33 medical specialties available)
